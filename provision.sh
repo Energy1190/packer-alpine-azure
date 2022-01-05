@@ -6,6 +6,7 @@ apk update && apk upgrade
 # Pre-reqs for WALinuxAgent
 apk add openssl sudo bash shadow parted iptables sfdisk
 apk add python py-setuptools
+apk add openvpn
 
 # Install WALinuxAgent
 wget https://github.com/Azure/WALinuxAgent/archive/v2.2.19.tar.gz && \
@@ -47,3 +48,6 @@ rc-update add waagent default
 mkdir -p /usr/local/sbin
 mv /tmp/useradd.sh /usr/local/sbin/useradd
 chmod +x /usr/local/sbin/useradd
+
+mv /tmp/ipconfig.sh /usr/local/sbin/ipconfig
+chmod +x /usr/local/sbin/ipconfig

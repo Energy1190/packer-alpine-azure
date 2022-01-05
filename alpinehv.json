@@ -52,6 +52,11 @@
             "destination": "/tmp/useradd.sh"
         },
         {
+            "type": "file",
+            "source": "ipconfig.sh",
+            "destination": "/tmp/ipconfig.sh"
+        },
+        {
             "type": "shell",
             "script": "provision.sh"
         }
